@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Lost in Space</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #050510;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background-image: url('assets/hero_space.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .error-page::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(5, 5, 16, 0.8) 0%, rgba(15, 20, 40, 0.6) 100%);
+            z-index: -1;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        /* Pulse Animation */
+        @keyframes pulseGlow {
+            0% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+            50% { text-shadow: 0 0 40px rgba(0, 255, 255, 0.9), 0 0 80px rgba(0, 255, 255, 0.6); }
+            100% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+        }
+
+        /* Star twinkle animation */
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.2; transform: scale(0.8); }
+        }
+
+        /* Shooting star animation */
+        @keyframes shootingStar {
+            0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 1; }
+            100% { transform: translateX(-1000px) translateY(1000px) rotate(-45deg); opacity: 0; }
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle infinite ease-in-out;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        }
+
+        .shooting-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            animation: shootingStar 4s linear infinite;
+            opacity: 0;
+        }
+
+        .error-content {
+            animation: float 6s ease-in-out infinite;
+            background: rgba(10, 15, 30, 0.6);
+            padding: 60px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(8rem, 15vw, 12rem);
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulseGlow 4s infinite;
+            position: relative;
+        }
+
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: blur(25px);
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .error-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin: 20px 0;
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .error-desc {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-custom {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .btn-custom-primary {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #000;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn-custom-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 242, 254, 0.5);
+            color: #000;
+        }
+
+        .btn-custom-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-custom-outline:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            color: #fff;
+        }
+        
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .planet-1 {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 5%;
+            background: radial-gradient(circle at 30% 30%, #4facfe, #00f2fe, #050510);
+            box-shadow: 0 0 60px rgba(0, 242, 254, 0.4), inset -20px -20px 50px rgba(0,0,0,0.8);
+            opacity: 0.8;
+            animation-duration: 20s;
+        }
+
+        .planet-2 {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            right: 8%;
+            background: radial-gradient(circle at 30% 30%, #ff9a9e, #fecfef, #050510);
+            box-shadow: 0 0 40px rgba(255, 154, 158, 0.4), inset -15px -15px 40px rgba(0,0,0,0.8);
+            opacity: 0.7;
+            animation-duration: 12s;
+            animation-delay: -5s;
+        }
+
+        .astronaut {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            right: 15%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 13c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zM10 19.5V21h4v-1.5c-1.31.32-2.69.32-4 0z"/></svg>') no-repeat center center;
+            background-size: contain;
+            animation: float 8s infinite ease-in-out;
+            opacity: 0.5;
+            z-index: 1;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="bankio-loader">
+        <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 50px; margin-bottom: 40px; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 10px rgba(229,192,123,0.4)); animation: loaderPulse 2s ease-in-out infinite;">
+        <div class="solar-system">
+            <div class="sun"></div>
+            <div class="orbit orbit-earth">
+                <div class="earth">
+                    <div class="orbit orbit-moon">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bankio-loader-text" style="font-family: 'Orbitron', sans-serif; font-weight: 800; letter-spacing: 2px;">PREPARING FOR LAUNCH</div>
+    </div>
+
+    <section class="error-page">
+        <!-- Animated Background Elements -->
+        <div class="stars" id="stars-container"></div>
+        <div class="shooting-stars" id="shooting-stars-container"></div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="astronaut"></div>
+
+        <div class="container">
+            <div class="error-content" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Lost in Space</h2>
+                <p class="error-desc">Houston, we have a problem. The page you are looking for has drifted out of orbit or never existed in this universe.</p>
+                
+                <div class="btn-container">
+                    <a href="index.html" class="btn-custom btn-custom-primary">
+                        Return to Earth (Home)
+                    </a>
+                    <a href="javascript:history.back()" class="btn-custom btn-custom-outline">
+                        Go Back
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Generate Random Stars
+        document.addEventListener('DOMContentLoaded', () => {
+            const starsContainer = document.getElementById('stars-container');
+            const shootingStarsContainer = document.getElementById('shooting-stars-container');
+            const numStars = 150;
+            const numShootingStars = 5;
+
+            // Generate twinkling stars
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 3;
+                const delay = Math.random() * 5;
+                const duration = 2 + Math.random() * 4;
+
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.animationDelay = `${delay}s`;
+                star.style.animationDuration = `${duration}s`;
+
+                starsContainer.appendChild(star);
+            }
+
+            // Generate shooting stars
+            for (let i = 0; i < numShootingStars; i++) {
+                const shootingStar = document.createElement('div');
+                shootingStar.classList.add('shooting-star');
+                
+                const x = 50 + Math.random() * 100;
+                const y = -20 + Math.random() * 50;
+                const delay = Math.random() * 10;
+                const duration = 3 + Math.random() * 5;
+
+                shootingStar.style.left = `${x}%`;
+                shootingStar.style.top = `${y}%`;
+                shootingStar.style.animationDelay = `${delay}s`;
+                shootingStar.style.animationDuration = `${duration}s`;
+
+                shootingStarsContainer.appendChild(shootingStar);
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions | AI Solutions</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="bankio-loader">
+        <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 50px; margin-bottom: 40px; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 10px rgba(229,192,123,0.4)); animation: loaderPulse 2s ease-in-out infinite;">
+        <div class="solar-system">
+            <div class="sun"></div>
+            <div class="orbit orbit-earth">
+                <div class="earth">
+                    <div class="orbit orbit-moon">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bankio-loader-text" style="font-family: 'Orbitron', sans-serif; font-weight: 800; letter-spacing: 2px;">PREPARING FOR LAUNCH</div>
+    </div>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 45px; display: block; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 8px rgba(229,192,123,0.3));">
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html" class="active">Service</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-mobile-only"><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="header-btns">
+          <a href="login.html" class="btn btn-primary">Login</a>
+        </div>
+        <button id="navToggle" class="nav-toggle">â˜°</button>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header" style="background: var(--dark); padding: 150px 0 80px; text-align: center; border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">AI & Machine Learning Solutions</h1>
+        <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Choose your integration. From custom LLM training to computer vision, your journey to automation starts here.</p>
+      </div>
+    </div>
+
+    <!-- Experiences Details -->
+    <section class="section-padding">
+      <div class="container">
+        
+        <!-- Experience 1: LLM -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; align-items: center; margin-bottom: 100px;">
+          <div data-aos="fade-right" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/service_iss.webp" alt="LLM Training" style="width: 100%; height: auto;" />
+          </div>
+          <div data-aos="fade-left">
+            <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">NATURAL LANGUAGE</h4>
+            <h2 style="margin-bottom: 30px; font-size: 2.5rem;">Custom LLM Training</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+              Deploy and fine-tune large language models directly on your proprietary data. We optimize parameters for high reasoning accuracy and zero-latency response.
+            </p>
+            <ul style="color: var(--text-muted); margin-bottom: 30px; list-style: none; padding: 0;">
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Domain-specific vocabulary injection</li>
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> RAG (Retrieval-Augmented Generation) setups</li>
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Low-latency inference endpoints</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Inquire Now</a>
+          </div>
+        </div>
+
+        <!-- Experience 2: Analytics -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; align-items: center; margin-bottom: 100px;">
+          <div data-aos="fade-right" style="order: 2;">
+            <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">DEEP LEARNING</h4>
+            <h2 style="margin-bottom: 30px; font-size: 2.5rem;">Predictive Analytics</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+              Travel further into your data than anyone has gone. Our predictive models analyze vast datasets to offer an unprecedented view of future market trends and user behavior.
+            </p>
+            <ul style="color: var(--text-muted); margin-bottom: 30px; list-style: none; padding: 0;">
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Time-series forecasting</li>
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Anomaly detection</li>
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Real-time data processing</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Inquire Now</a>
+          </div>
+          <div data-aos="fade-left" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); order: 1;">
+            <img src="assets/service_lunar.webp" alt="Analytics" style="width: 100%; height: auto;" />
+          </div>
+        </div>
+
+        <!-- Experience 3: Computer Vision -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; align-items: center;">
+          <div data-aos="fade-right" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/service_zero_g.webp" alt="Computer Vision" style="width: 100%; height: auto;" />
+          </div>
+          <div data-aos="fade-left">
+            <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">PERCEPTION</h4>
+            <h2 style="margin-bottom: 30px; font-size: 2.5rem;">Computer Vision</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+              Experience true automation in visual tasks. Aboard our highly optimized inference clusters, you will be able to process video feeds and images in real-time.
+            </p>
+            <ul style="color: var(--text-muted); margin-bottom: 30px; list-style: none; padding: 0;">
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Object detection and tracking</li>
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Facial recognition algorithms</li>
+              <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="color: var(--primary); margin-right: 10px;">âœ”</span> Automated visual inspection</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- The Destination -> The Hardware -->
+    <section class="section-padding" style="background: var(--light-bg); border-top: 1px solid var(--border);">
+      <div class="container text-center">
+        <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">THE INFRASTRUCTURE</h4>
+        <h2 style="margin-bottom: 60px;">The AI Compute Cluster</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: left; align-items: center;">
+          <div data-aos="fade-right">
+            <h3 style="margin-bottom: 20px; font-size: 2rem;">A Home for Neural Nets</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+              Processing approximately 250 terabytes of data daily at a staggering 17,500 operations per second, our cluster is humanity's greatest computing achievement and your competitive edge.
+            </p>
+            <ul style="color: var(--text-muted); margin-bottom: 30px; list-style: none; padding: 0; display: grid; grid-template-columns: max-content 1fr; gap: 15px 20px; align-items: start; line-height: 1.6;">
+              <li style="display: contents;">
+                <strong style="color: var(--primary); text-align: right;">H100 Nodes:</strong>
+                <span>Experience the raw power of the latest NVIDIA Tensor Cores.</span>
+              </li>
+              <li style="display: contents;">
+                <strong style="color: var(--primary); text-align: right;">Liquid Cooling:</strong>
+                <span>Our data centers maintain optimal thermal limits, offering the most stable training environment.</span>
+              </li>
+              <li style="display: contents;">
+                <strong style="color: var(--primary); text-align: right;">Low Latency:</strong>
+                <span>Learn to deploy models in an environment free from network bottlenecks.</span>
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-left" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/service_inside_iss.webp" alt="Server Cluster" style="width: 100%; height: auto; filter: hue-rotate(45deg);" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training & Preparation -> Model Integration -->
+    <section class="section-padding" style="background: var(--dark); border-top: 1px solid var(--border);">
+      <div class="container text-center">
+        <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">THE PROCESS</h4>
+        <h2 style="margin-bottom: 60px; color: #fff;">Model Integration</h2>
+        <style>
+          @keyframes scrollTrain {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .train-marquee {
+            display: flex;
+            gap: 40px;
+            width: max-content;
+            animation: scrollTrain 35s linear infinite;
+            padding: 20px 0;
+          }
+          .train-marquee:hover {
+            animation-play-state: paused;
+          }
+          .train-card {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: left;
+            transition: all 0.4s ease;
+          }
+          .train-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,255,255,0.15);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 255, 255, 0.4);
+          }
+        </style>
+        <div style="overflow: hidden; width: 100%; position: relative;">
+          <div class="train-marquee">
+            <!-- Group 1 -->
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">01</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Data Auditing</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Comprehensive data evaluations ensure your datasets are clean and ready for the demands of training.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">02</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Model Selection</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Choosing the right foundational architecture to prepare your enterprise for deployment.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">03</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Pre-Training</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Learn the ins and outs of our large-scale distributed training on hundreds of GPUs.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">04</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Fine-Tuning</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Applying RLHF and alignment courses to ensure readiness for any business scenario.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">05</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Latency Optimization</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Master running operations in a fast environment through our specialized inference APIs.</p>
+            </div>
+            
+            <!-- Group 2 (Duplicate for seamless loop) -->
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">01</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Data Auditing</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Comprehensive data evaluations ensure your datasets are clean and ready for the demands of training.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">02</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Model Selection</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Choosing the right foundational architecture to prepare your enterprise for deployment.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">03</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Pre-Training</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Learn the ins and outs of our large-scale distributed training on hundreds of GPUs.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">04</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Fine-Tuning</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Applying RLHF and alignment courses to ensure readiness for any business scenario.</p>
+            </div>
+            <div class="train-card">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">05</div>
+              <h3 style="color: #fff; margin-bottom: 15px;">Latency Optimization</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Master running operations in a fast environment through our specialized inference APIs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: CTA / Discover -->
+    <section class="section-padding" style="background: var(--light-bg); border-top: 1px solid var(--border); text-align: center;">
+      <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Begin Your AI Journey</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 40px auto; font-size: 1.1rem;">Explore our tailored model packages and find the perfect AI solution that suits your ultimate ambitions.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="404.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">Read Our Papers</a>
+            <a href="contact.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">Consult an Engineer</a>
+        </div>
+      </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">
+              <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 45px; display: block; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 8px rgba(229,192,123,0.3));">
+            </a>
+            <p class="footer-description">
+              Opening the AI frontier to all. Experience the ultimate intelligent automation in every global model.
+            </p>
+            <div class="footer-socials">
+              <a href="404.html" aria-label="Facebook">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+              </a>
+              <a href="404.html" aria-label="Twitter">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+              <a href="404.html" aria-label="Instagram">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2h10c2.76 0 5 2.24 5 5v10c0 2.76-2.24 5-5 5H7c-2.76 0-5-2.24-5-5V7c0-2.76 2.24-5 5-5zm0 2c-1.66 0-3 1.34-3 3v10c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V7c0-1.66-1.34-3-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.75-1a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="404.html">Custom LLMs</a></li>
+              <li><a href="404.html">Predictive Analytics</a></li>
+              <li><a href="404.html">Computer Vision</a></li>
+              <li><a href="404.html">Model Fine-Tuning</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="404.html">Contact Us</a></li>
+              <li><a href="404.html">FAQ Center</a></li>
+              <li><a href="404.html">Security</a></li>
+              <li><a href="404.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Subscribe to receive our latest AI updates.</p>
+            <form action="404.html" class="newsletter-form">
+              <input type="email" placeholder="Your work email" required />
+              <button href="404.html" type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-grid">
+            <p>&copy; 2026 AI Solutions. All rights reserved.</p>
+            <div class="footer-policy-links">
+              <a href="404.html">Terms of Service</a>
+              <a href="404.html">Privacy Policy</a>
+              <a href="404.html">Cookie Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+

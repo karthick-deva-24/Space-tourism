@@ -1,0 +1,816 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Solutions | Powering the future with Intelligence</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="bankio-loader">
+        <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 50px; margin-bottom: 40px; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 10px rgba(229,192,123,0.4)); animation: loaderPulse 2s ease-in-out infinite;">
+        <div class="solar-system">
+            <div class="sun"></div>
+            <div class="orbit orbit-earth">
+                <div class="earth">
+                    <div class="orbit orbit-moon">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bankio-loader-text" style="font-family: 'Orbitron', sans-serif; font-weight: 800; letter-spacing: 2px;">PREPARING FOR LAUNCH</div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+          <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 45px; display: block; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.2) drop-shadow(0 0 8px rgba(229,192,123,0.3));">
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-mobile-only"><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="header-btns">
+          <a href="login.html" class="btn btn-primary">Login</a>
+        </div>
+        <button id="navToggle" class="nav-toggle">â˜°</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img src="assets/space_hero_bg.webp" class="hero-video" alt="Space Orbital Station" style="width: 100%; height: 100%; object-fit: cover;" />
+      <div class="hero-overlay"></div>
+      <div class="container text-center">
+        <h1
+          data-aos="fade-up"
+          style="
+            font-size: clamp(1.8rem, 8vw, 4rem);
+            margin-bottom: 25px;
+            color: #fff;
+          "
+        >
+          Journey to the <br /><span
+            style="
+              background: var(--primary-gradient);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            >Final Frontier</span
+          >
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          style="
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+          "
+        >
+          Experience the ultimate adventure in luxury spaceflight. Join the elite travelers exploring the cosmos from our orbital stations. Secure your boarding pass today.
+        </p>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          style="display: flex; gap: 20px; justify-content: center"
+        >
+          <a href="404.html" class="btn btn-primary">Explore Solutions</a>
+          <a
+            href="404.html"
+            class="btn btn-secondary btn-explore"
+            style="
+              background: rgba(255, 255, 255, 0.1);
+              border-color: rgba(255, 255, 255, 0.2);
+              color: #fff;
+            "
+            >Book a Consultation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- MZ Mission Section -->
+    <section class="section-padding" style="background: var(--dark);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; align-items: center;">
+          <div data-aos="fade-right">
+            <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">ENTERPRISE AI</h4>
+            <h2 style="margin-bottom: 30px; font-size: 2.5rem; color: #fff;">Next-Gen Predictive Models</h2>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+              Our AI solutions are a historic milestone in enterprise automation. Leveraging state-of-the-art transformers and deep learning architectures, we empower organizations to forecast market trends with unprecedented accuracy.
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 30px; font-size: 1.1rem; line-height: 1.8;">
+              This marks the first autonomous system capable of multi-modal reasoning, testing the limits of computational capabilities and opening the door for future innovation.
+            </p>
+            <a href="service.html" class="btn btn-primary">Learn About Our Models</a>
+          </div>
+          <div data-aos="fade-left" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/iss_mission.webp" alt="Enterprise AI Dashboard" style="width: 100%; height: auto;" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section
+      class="stats-section section-padding"
+      style="background-color: var(--light-bg)"
+    >
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+          "
+        >
+          <div class="reveal">
+            <h2
+              class="counter"
+              data-target="150"
+              style="
+                color: var(--primary);
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+              "
+            >
+              0
+            </h2>
+            <p style="font-weight: 600">Active AI Workloads</p>
+          </div>
+          <div class="reveal">
+            <h2
+              class="counter"
+              data-target="50000"
+              style="
+                color: var(--primary);
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+              "
+            >
+              0
+            </h2>
+            <p style="font-weight: 600">Terabytes Processed</p>
+          </div>
+          <div class="reveal">
+            <h2
+              class="counter"
+              data-target="15"
+              style="
+                color: var(--primary);
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+              "
+            >
+              0
+            </h2>
+            <p style="font-weight: 600">Years of ML Experience</p>
+          </div>
+          <div class="reveal">
+            <h2
+              class="counter"
+              data-target="99"
+              style="
+                color: var(--primary);
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+              "
+            >
+              0
+            </h2>
+            <p style="font-weight: 600">Model Accuracy (%)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spaceflight Experiences Section -->
+    <section class="investment-tiers section-padding">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px">
+          <h4
+            style="
+              color: var(--secondary);
+              margin-bottom: 15px;
+              letter-spacing: 2px;
+            "
+          >
+            OUR EXPERTISE
+          </h4>
+          <h2 style="margin-bottom: 20px">AI & Machine Learning Solutions</h2>
+          <p
+            style="
+              max-width: 700px;
+              margin: 20px auto;
+              color: var(--text-muted);
+              font-size: 1.1rem;
+            "
+          >
+            Choose your AI integration. Whether you need generative models, computer vision, or predictive analytics, we make the impossible, possible.
+          </p>
+        </div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(min(100%, 320px), 1fr)
+            );
+            gap: 30px;
+          "
+        >
+          <div
+            class="reveal card"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              padding: 0;
+              overflow: hidden;
+            "
+          >
+            <div style="width: 100%; height: 200px; overflow: hidden;">
+              <img
+                src="assets/crew_dragon_index.webp"
+                alt="Custom LLM Training"
+                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.1)'"
+                onmouseout="this.style.transform='scale(1)'"
+              />
+            </div>
+            <div style="padding: 30px;">
+              <h3>Custom LLM Training</h3>
+              <p style="color: var(--text-muted); margin: 15px 0 25px">
+                Deploy domain-specific Large Language Models tailored to your enterprise data.
+              </p>
+              <a href="404.html" style="color: var(--primary); font-weight: 700"
+                >Learn More &rarr;</a
+              >
+            </div>
+          </div>
+          
+          <div
+            class="reveal card"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              padding: 0;
+              overflow: hidden;
+            "
+          >
+            <div style="width: 100%; height: 200px; overflow: hidden;">
+              <img
+                src="assets/soyuz_rocket_index.webp"
+                alt="Predictive Analytics"
+                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.1)'"
+                onmouseout="this.style.transform='scale(1)'"
+              />
+            </div>
+            <div style="padding: 30px;">
+              <h3>Predictive Analytics</h3>
+              <p style="color: var(--text-muted); margin: 15px 0 25px">
+                Turn vast datasets into actionable insights with deep learning algorithms.
+              </p>
+              <a href="404.html" style="color: var(--primary); font-weight: 700"
+                >Learn More &rarr;</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="reveal card"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              padding: 0;
+              overflow: hidden;
+            "
+          >
+            <div style="width: 100%; height: 200px; overflow: hidden;">
+              <img
+                src="assets/mz_mission_index.webp"
+                alt="Computer Vision"
+                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.1)'"
+                onmouseout="this.style.transform='scale(1)'"
+              />
+            </div>
+            <div style="padding: 30px;">
+              <h3>Computer Vision</h3>
+              <p style="color: var(--text-muted); margin: 15px 0 25px">
+                Automate visual inspection and analysis with state-of-the-art CNNs.
+              </p>
+              <a href="404.html" style="color: var(--primary); font-weight: 700"
+                >Learn More &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Safety Section -->
+    <section
+      class="section-padding"
+      style="background: var(--dark); color: var(--white)"
+    >
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(min(100%, 450px), 1fr)
+            );
+            gap: 60px;
+            align-items: center;
+          "
+        >
+          <div class="reveal">
+            <h4
+              style="
+                color: var(--secondary);
+                margin-bottom: 15px;
+                letter-spacing: 2px;
+              "
+            >
+              DATA PRIVACY & ETHICS
+            </h4>
+            <h2 style="margin-bottom: 30px; color: #fff">
+              World-Class AI Safety
+            </h2>
+            <p style="font-size: 1.1rem; opacity: 0.7; margin-bottom: 40px">
+              Your data security is our absolute highest priority. We utilize privacy-preserving machine learning and federated learning protocols to ensure your models are safe, unbiased, and robust.
+            </p>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(
+                  auto-fit,
+                  minmax(min(100%, 250px), 1fr)
+                );
+                gap: 20px;
+              "
+            >
+              <div
+                style="
+                  padding: 20px;
+                  background: rgba(255, 255, 255, 0.05);
+                  border-radius: 15px;
+                "
+              >
+                <h3
+                  style="
+                    color: var(--primary);
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Federated Learning
+                </h3>
+                <p style="font-size: 0.85rem; opacity: 0.6">
+                  We use secure, decentralized training techniques that never compromise your raw data.
+                </p>
+              </div>
+              <div
+                style="
+                  padding: 20px;
+                  background: rgba(255, 255, 255, 0.05);
+                  border-radius: 15px;
+                "
+              >
+                <h3
+                  style="
+                    color: var(--primary);
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Algorithmic Fairness
+                </h3>
+                <p style="font-size: 0.85rem; opacity: 0.6">
+                  Extensive evaluation at professional AI auditing centers ensures your models are free from bias.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div
+              style="
+                position: relative;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 30px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+              "
+            >
+              <img
+                src="assets/join_elite_bg.webp"
+                alt="AI Safety"
+                style="
+                  width: 100%;
+                  border-radius: 20px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      class="testimonials-section section-padding"
+      style="background-color: var(--light-bg)"
+    >
+      <div class="container text-center">
+        <h4 style="color: var(--secondary); margin-bottom: 10px">
+          CLIENT TESTIMONIALS
+        </h4>
+        <h2 style="margin-bottom: 50px">
+          Words from Industry Leaders
+        </h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(min(100%, 300px), 1fr)
+            );
+            gap: 30px;
+          "
+        >
+          <div
+            class="reveal"
+            style="
+              padding: 30px;
+              background: var(--dark);
+              border-radius: 15px;
+              box-shadow: var(--shadow-sm);
+              border: 1px solid var(--border);
+            "
+          >
+            <p
+              style="
+                font-style: italic;
+                color: var(--text-muted);
+                margin-bottom: 20px;
+              "
+            >
+              "Deploying their proprietary LLM changed our entire data pipeline. It is a profoundly transformative experience."
+            </p>
+            <h4 style="color: var(--primary)">Richard Garriott</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted)">
+              Chief Data Officer
+            </p>
+          </div>
+          <div
+            class="reveal"
+            style="
+              padding: 30px;
+              background: var(--dark);
+              border-radius: 15px;
+              box-shadow: var(--shadow-sm);
+              border: 1px solid var(--border);
+            "
+          >
+            <p
+              style="
+                font-style: italic;
+                color: var(--text-muted);
+                margin-bottom: 20px;
+              "
+            >
+              "The model training was rigorous but incredibly rewarding. Every computational cycle was worth the investment."
+            </p>
+            <h4 style="color: var(--primary)">Anousheh Ansari</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted)">
+              VP of Engineering
+            </p>
+          </div>
+          <div
+            class="reveal"
+            style="
+              padding: 30px;
+              background: var(--dark);
+              border-radius: 15px;
+              box-shadow: var(--shadow-sm);
+              border: 1px solid var(--border);
+            "
+          >
+            <p
+              style="
+                font-style: italic;
+                color: var(--text-muted);
+                margin-bottom: 20px;
+              "
+            >
+              "Automating our visual inspections using their CNN models is the most freeing feeling imaginable. It's pure magic."
+            </p><br>
+            <h4 style="color: var(--primary)">Dennis Tito</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted)">
+              Operations Lead
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Fleet -->
+    <section class="section-padding" style="background: var(--dark); border-top: 1px solid var(--border);">
+      <div class="container text-center">
+        <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">THE HARDWARE</h4>
+        <h2 style="margin-bottom: 60px; color: #fff;">Our Compute Clusters</h2>
+        
+        <style>
+          .fleet-card-wrapper {
+            position: relative;
+            border-radius: 12px;
+            padding: 2px;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            z-index: 1;
+            background: var(--border);
+          }
+          .fleet-card-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, transparent, transparent, var(--primary));
+            animation: border-spin 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+          }
+          .fleet-card-wrapper:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+          }
+          .fleet-card-wrapper:hover::before {
+            opacity: 1;
+          }
+          @keyframes border-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+          .fleet-card-inner {
+            background: var(--light-bg);
+            border-radius: 10px;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+          }
+          .fleet-img-zoom img {
+            transition: transform 0.6s ease, opacity 0.6s ease;
+          }
+          .fleet-card-wrapper:hover .fleet-img-zoom img {
+            transform: scale(1.1);
+            opacity: 1 !important;
+          }
+        </style>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; text-align: left;">
+          
+          <div class="fleet-card-wrapper" data-aos="fade-up">
+            <div class="fleet-card-inner">
+              <div class="fleet-img-zoom" style="width: 100%; height: 200px; background: #000; overflow: hidden;">
+                <img src="assets/lunar_mission.webp" alt="Tensor Core Cluster" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" />
+              </div>
+              <div style="padding: 30px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">H100 Tensor Core Cluster</h3>
+                <p style="color: var(--text-muted);">The legendary NVIDIA H100 cluster is the most powerful and reliable AI hardware in history. It has been the backbone of generative AI training since 2024, providing a robust compute capacity.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="fleet-card-wrapper" data-aos="fade-up" data-aos-delay="100">
+            <div class="fleet-card-inner">
+              <div class="fleet-img-zoom" style="width: 100%; height: 200px; background: #000; overflow: hidden;">
+                <img src="assets/service_spacewalk.webp" alt="Quantum Processor" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; filter: hue-rotate(180deg);" />
+              </div>
+              <div style="padding: 30px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">Quantum Edge Processors</h3>
+                <p style="color: var(--text-muted);">The cutting-edge, fully autonomous Quantum Processing Units represent the new era of complex optimization algorithms. Featuring rapid qubit cohesion, it's a modern marvel.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Partnerships -->
+    <section class="section-padding" style="background: var(--light-bg); border-top: 1px solid var(--border); overflow: hidden;">
+      <div class="container text-center">
+        <h4 style="color: var(--secondary); margin-bottom: 15px; letter-spacing: 2px;">TRUSTED BY</h4>
+        <h2 style="margin-bottom: 60px;">Our Technology Partners</h2>
+      </div>
+      <style>
+        .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          position: relative;
+          padding: 20px 0;
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-content {
+          display: inline-block;
+          animation: marquee-scroll 25s linear infinite;
+        }
+        .marquee-content h3 {
+          display: inline-block;
+          font-size: 1.8rem;
+          letter-spacing: 4px;
+          margin: 0 50px;
+          opacity: 0.5;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        .marquee-content h3:hover {
+          opacity: 1;
+          transform: scale(1.1);
+          color: var(--primary, #007BFF);
+        }
+        @keyframes marquee-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      </style>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <!-- First set -->
+          <h3>OPENAI</h3>
+          <h3>GOOGLE DEEPMIND</h3>
+          <h3>ANTHROPIC</h3>
+          <h3>NVIDIA</h3>
+          <h3>META AI</h3>
+          <h3>MICROSOFT</h3>
+          <h3>AWS</h3>
+          <h3>HUGGING FACE</h3>
+          <!-- Duplicate set for seamless loop -->
+          <h3>OPENAI</h3>
+          <h3>GOOGLE DEEPMIND</h3>
+          <h3>ANTHROPIC</h3>
+          <h3>NVIDIA</h3>
+          <h3>META AI</h3>
+          <h3>MICROSOFT</h3>
+          <h3>AWS</h3>
+          <h3>HUGGING FACE</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join The Elite -->
+    <section class="section-padding" style="background: url('assets/join_elite_bg.webp') center/cover fixed; color: #fff; text-align: center; position: relative;">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: 0;"></div>
+      <div class="container" style="position: relative; z-index: 1;">
+        <div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 60px 40px; max-width: 900px; margin: 0 auto; box-shadow: 0 25px 50px rgba(0,0,0,0.5);">
+          <h2 style="font-size: 3.5rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 3px; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.3);">Join the AI Revolution</h2>
+          <p style="font-size: 1.25rem; margin: 0 auto 30px auto; color: rgba(255,255,255,0.95); line-height: 1.8; font-weight: 300;">
+            To date, only the most visionary companies have fully integrated autonomous generative models into their core business. Are you ready to become the next pioneer in AI history?
+          </p>
+          <div style="width: 80px; height: 3px; background: var(--primary); margin: 0 auto 30px auto; box-shadow: 0 0 10px var(--primary);"></div>
+          <p style="font-size: 1.1rem; margin: 0 auto 40px auto; color: rgba(255,255,255,0.75); line-height: 1.8;">
+            Since the dawn of computing, humanity has looked to build intelligent machines. Now, the final frontier of automation is within your reach. Experience the life-changing perspective of exponential growth, harnessing zero-latency inference on the edge. This is not just a software update; it is a profound transformation.
+          </p>
+          
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 50px;">
+            <div style="text-align: center;">
+              <div style="font-size: 3rem; font-weight: bold; color: var(--primary); text-shadow: 0 0 15px rgba(229,192,123,0.4);">175B</div>
+              <div style="font-size: 0.9rem; color: #ccc; text-transform: uppercase; letter-spacing: 2px;">Parameters</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 3rem; font-weight: bold; color: var(--primary); text-shadow: 0 0 15px rgba(229,192,123,0.4);">0.01</div>
+              <div style="font-size: 0.9rem; color: #ccc; text-transform: uppercase; letter-spacing: 2px;">MS Latency</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 3rem; font-weight: bold; color: var(--primary); text-shadow: 0 0 15px rgba(229,192,123,0.4);">AGI</div>
+              <div style="font-size: 0.9rem; color: #ccc; text-transform: uppercase; letter-spacing: 2px;">Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: CTA / Discover -->
+    <section class="section-padding" style="background: var(--light-bg); border-top: 1px solid var(--border); text-align: center;">
+      <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Reach AGI?</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 40px auto; font-size: 1.1rem;">Join the exclusive waitlist for our upcoming multi-modal foundational models. Intelligence awaits those who dare.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="404.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">Deploy a Model</a>
+            <a href="contact.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">Contact AI Engineers</a>
+        </div>
+      </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+              <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 45px; display: block; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.2) drop-shadow(0 0 8px rgba(229,192,123,0.3));">
+            </a>
+            <p class="footer-description">
+              Opening the AI frontier to all. Experience the ultimate intelligent automation in every global model.
+            </p>
+            <div class="footer-socials">
+              <a href="404.html" aria-label="Facebook">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+              </a>
+              <a href="404.html" aria-label="Twitter">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+              <a href="404.html" aria-label="Instagram">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2h10c2.76 0 5 2.24 5 5v10c0 2.76-2.24 5-5 5H7c-2.76 0-5-2.24-5-5V7c0-2.76 2.24-5 5-5zm0 2c-1.66 0-3 1.34-3 3v10c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V7c0-1.66-1.34-3-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.75-1a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="404.html">Custom LLMs</a></li>
+              <li><a href="404.html">Predictive Analytics</a></li>
+              <li><a href="404.html">Computer Vision</a></li>
+              <li><a href="404.html">Model Fine-Tuning</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Service</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="404.html">Contact Us</a></li>
+              <li><a href="404.html">FAQ Center</a></li>
+              <li><a href="404.html">Security</a></li>
+              <li><a href="404.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Subscribe to receive our latest AI updates.</p>
+            <form action="404.html" class="newsletter-form" >
+              <input type="email" placeholder="Your work email" required />
+              <button href="404.html" type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-grid">
+            <p>&copy; 2026 AI Solutions. All rights reserved.</p>
+            <div class="footer-policy-links">
+              <a href="404.html">Terms of Service</a>
+              <a href="404.html">Privacy Policy</a>
+              <a href="404.html">Cookie Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
