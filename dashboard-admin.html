@@ -1,31 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Control | AI Solutions</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Lucide Icons Library -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <style>
-        body { background-color: var(--dashboard-bg); display: flex; min-height: 100vh; font-family: 'Space Grotesk', sans-serif; margin: 0; color: var(--text-main); overflow-x: clip !important; }
-        
-        .sidebar { 
-            width: var(--sidebar-width); 
-            background: #09090b; 
-            padding: 2.5rem 2rem; 
-            display: flex; 
-            flex-direction: column; 
-            height: 100vh; 
-            position: sticky; 
-            top: 0; 
+        body {
+            background-color: var(--dashboard-bg);
+            display: flex;
+            min-height: 100vh;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            color: var(--text-main);
+            overflow-x: clip !important;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background: #09090b;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            position: sticky;
+            top: 0;
             z-index: 1100;
             transition: var(--transition);
-            border-right: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
             flex-shrink: 0;
             overflow-y: auto;
         }
@@ -43,7 +54,8 @@
             gap: 0.5rem;
         }
 
-        .sidebar-menu a, .logout-link {
+        .sidebar-menu a,
+        .logout-link {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -57,12 +69,12 @@
 
         .sidebar-menu a:hover {
             color: #fff;
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .sidebar-menu a.active {
             color: var(--white);
-            background: rgba(229,192,123,0.1);
+            background: rgba(229, 192, 123, 0.1);
             position: relative;
             box-shadow: none;
         }
@@ -78,13 +90,14 @@
             border-radius: 0 4px 4px 0;
         }
 
-        .sidebar-menu i, .sidebar-menu svg {
+        .sidebar-menu i,
+        .sidebar-menu svg {
             width: 18px;
             height: 18px;
         }
 
-        .main-content { 
-            flex: 1; 
+        .main-content {
+            flex: 1;
             height: 100vh;
             overflow-y: auto;
             background: var(--dashboard-bg);
@@ -92,24 +105,83 @@
             width: 100%;
             padding-top: 0 !important;
         }
-        
+
         @media (max-width: 991px) {
-            .sidebar { position: fixed; left: -280px; }
-            .sidebar.active { left: 0; }
-            .main-content { margin-left: 0 !important; padding: 0 0 1.5rem 0 !important; }
+            .sidebar {
+                position: fixed;
+                left: -280px;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .main-content {
+                margin-left: 0 !important;
+                padding: 0 0 1.5rem 0 !important;
+            }
         }
 
-        .menu-toggle { display: none; position: fixed; top: 20px; right: 20px; z-index: 1200; background: var(--primary-gradient); color: #fff; border: none; padding: 10px; border-radius: 8px; cursor: pointer; }
-        @media (max-width: 991px) { .menu-toggle { display: block; } }
-        
-        .transaction-table { width: 100%; border-collapse: collapse; }
-        .transaction-table th, .transaction-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
-        .transaction-table th { color: var(--text-muted); font-weight: 500; font-size: 0.85rem; }
-        .transaction-table td { color: var(--text-main); font-size: 0.9rem; }
-        .badge { padding: 5px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-        .badge-success { background: rgba(16, 185, 129, 0.1); color: #10B981; }
-        .badge-danger { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
-        
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1200;
+            background: var(--primary-gradient);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        .transaction-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .transaction-table th,
+        .transaction-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .transaction-table th {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .transaction-table td {
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10B981;
+        }
+
+        .badge-danger {
+            background: rgba(239, 68, 68, 0.1);
+            color: #EF4444;
+        }
+
         /* Fix for btn-secondary text contrast on hover */
         .btn-secondary:hover {
             color: #09090b !important;
@@ -117,10 +189,12 @@
         }
     </style>
 </head>
+
 <body style="background: var(--dashboard-bg);">
     <!-- Preloader -->
     <div class="bankio-loader">
-        <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 50px; margin-bottom: 40px; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 10px rgba(229,192,123,0.4)); animation: loaderPulse 2s ease-in-out infinite;">
+        <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo"
+            style="height: 50px; margin-bottom: 40px; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 10px rgba(229,192,123,0.4)); animation: loaderPulse 2s ease-in-out infinite;">
         <div class="solar-system">
             <div class="sun"></div>
             <div class="orbit orbit-earth">
@@ -131,21 +205,27 @@
                 </div>
             </div>
         </div>
-        <div class="bankio-loader-text" style="font-family: 'Orbitron', sans-serif; font-weight: 800; letter-spacing: 2px;">PREPARING FOR LAUNCH</div>
+        <div class="bankio-loader-text"
+            style="font-family: 'Orbitron', sans-serif; font-weight: 800; letter-spacing: 2px;">PREPARING FOR LAUNCH
+        </div>
     </div>
     <button class="menu-toggle" id="menuToggle">â˜°</button>
 
     <aside class="sidebar" id="sidebar">
         <a href="index.html" class="sidebar-logo">
-            <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo" style="height: 45px; display: block; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 8px rgba(229,192,123,0.3));">
+            <img src="assets/Stackly-logo-Blue.webp" alt="Stackly Logo"
+                style="height: 45px; display: block; filter: hue-rotate(-165deg) saturate(1.5) brightness(1.5) drop-shadow(0 0 8px rgba(229,192,123,0.3));">
         </a>
         <ul class="sidebar-menu">
-            <li><a href="dashboard-admin.html" class="active" data-section="dashboard"><i data-lucide="layout-dashboard"></i> <span>System Overview</span></a></li>
+            <li><a href="dashboard-admin.html" class="active" data-section="dashboard"><i
+                        data-lucide="layout-dashboard"></i> <span>System Overview</span></a></li>
             <li><a href="#" data-section="users"><i data-lucide="users"></i> <span>Engineer Management</span></a></li>
-            <li><a href="#" data-section="transactions"><i data-lucide="calendar"></i> <span>Training Planner</span></a></li>
+            <li><a href="#" data-section="transactions"><i data-lucide="calendar"></i> <span>Training Planner</span></a>
+            </li>
             <li><a href="#" data-section="security"><i data-lucide="activity"></i> <span>Data Records</span></a></li>
             <li><a href="#" data-section="health"><i data-lucide="activity"></i> <span>Server Health</span></a></li>
-            <li><a href="#" data-section="infrastructure"><i data-lucide="settings"></i> <span>Deployment Ops</span></a></li>
+            <li><a href="#" data-section="infrastructure"><i data-lucide="settings"></i> <span>Deployment Ops</span></a>
+            </li>
         </ul>
         <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);">
             <a href="login.html" class="logout-link" style="color: #ef4444;">
@@ -171,72 +251,98 @@
             <section class="dashboard-section-header reveal active">
                 <div>
                     <h1 style="letter-spacing: -0.5px; font-weight: 800; margin-bottom: 5px;">System Overview</h1>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Real-time training operations and analytics.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Real-time training operations and analytics.
+                    </p>
                 </div>
                 <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <input type="date" value="2026-06-15" style="padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); font-family: inherit; font-size: 0.85rem; outline: none; background: #fff;">
-                    <a href="404.html"><button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 10px;">Download Data</button></a>
+                    <input type="date" value="2026-06-15"
+                        style="padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); font-family: inherit; font-size: 0.85rem; outline: none; background: #fff;">
+                    <a href="404.html"><button class="btn btn-primary"
+                            style="padding: 10px 20px; font-size: 0.85rem; border-radius: 10px;">Download
+                            Data</button></a>
                 </div>
             </section>
 
             <section class="dashboard-grid">
-            <div class="card-premium">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                    <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Active Engineers</p>
-                    <div style="padding: 8px; background: rgba(229,192,123,0.1); color: var(--primary); border-radius: 8px;"><i data-lucide="users" style="width: 16px; height: 16px;"></i></div>
-                </div>
-                <h2 style="margin: 0; color: var(--dark);">12</h2>
-                <div style="margin-top: 15px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
-                        <span>Target: 20</span>
-                        <span>60%</span>
+                <div class="card-premium">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+                        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Active Engineers</p>
+                        <div
+                            style="padding: 8px; background: rgba(229,192,123,0.1); color: var(--primary); border-radius: 8px;">
+                            <i data-lucide="users" style="width: 16px; height: 16px;"></i></div>
                     </div>
-                    <div class="progress-track"><div class="progress-fill" style="width: 60%;"></div></div>
-                </div>
-            </div>
-            <div class="card-premium">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                    <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Upcoming Deployments</p>
-                    <div style="padding: 8px; background: rgba(58, 123, 213, 0.1); color: var(--secondary); border-radius: 8px;"><i data-lucide="server" style="width: 16px; height: 16px;"></i></div>
-                </div>
-                <h2 style="margin: 0; color: var(--dark);">2</h2>
-                <div style="margin-top: 15px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
-                        <span>Deployments this year</span>
-                        <span>100% Nominal</span>
-                    </div>
-                    <div class="progress-track"><div class="progress-fill" style="width: 100%; background: #10B981;"></div></div>
-                </div>
-            </div>
-            <div class="card-premium">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                    <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Evaluation Runs</p>
-                    <div style="padding: 8px; background: rgba(255, 255, 255, 0.1); color: var(--accent); border-radius: 8px;"><i data-lucide="play" style="width: 16px; height: 16px;"></i></div>
-                </div>
-                <h2 style="margin: 0; color: var(--dark);">4</h2>
-                <div style="margin-top: 15px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
-                        <span>This Month</span>
+                    <h2 style="margin: 0; color: var(--dark);">12</h2>
+                    <div style="margin-top: 15px;">
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
+                            <span>Target: 20</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-premium">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                    <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">System Alerts</p>
-                    <div style="padding: 8px; background: rgba(16, 185, 129, 0.1); color: #10B981; border-radius: 8px;"><i data-lucide="shield-check" style="width: 16px; height: 16px;"></i></div>
-                </div>
-                <h2 style="margin: 0; color: var(--dark);">0</h2>
-                <div style="margin-top: 15px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
-                        <span>All Systems Nominal</span>
+                <div class="card-premium">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+                        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Upcoming Deployments
+                        </p>
+                        <div
+                            style="padding: 8px; background: rgba(58, 123, 213, 0.1); color: var(--secondary); border-radius: 8px;">
+                            <i data-lucide="server" style="width: 16px; height: 16px;"></i></div>
+                    </div>
+                    <h2 style="margin: 0; color: var(--dark);">2</h2>
+                    <div style="margin-top: 15px;">
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
+                            <span>Deployments this year</span>
+                            <span>100% Nominal</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: #10B981;"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="card-premium">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+                        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Evaluation Runs</p>
+                        <div
+                            style="padding: 8px; background: rgba(255, 255, 255, 0.1); color: var(--accent); border-radius: 8px;">
+                            <i data-lucide="play" style="width: 16px; height: 16px;"></i></div>
+                    </div>
+                    <h2 style="margin: 0; color: var(--dark);">4</h2>
+                    <div style="margin-top: 15px;">
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
+                            <span>This Month</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-premium">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+                        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">System Alerts</p>
+                        <div
+                            style="padding: 8px; background: rgba(16, 185, 129, 0.1); color: #10B981; border-radius: 8px;">
+                            <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i></div>
+                    </div>
+                    <h2 style="margin: 0; color: var(--dark);">0</h2>
+                    <div style="margin-top: 15px;">
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px;">
+                            <span>All Systems Nominal</span>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="dashboard-grid" style="grid-template-columns: 1fr; margin-top: 20px;">
                 <div class="card-premium" style="padding: 30px; overflow-x: auto;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
                         <h3 style="margin: 0;">Engineer Roster</h3>
                     </div>
                     <table class="transaction-table">
@@ -257,7 +363,8 @@
                                 <td>Q3 2026</td>
                                 <td><span class="badge badge-success">65%</span></td>
                                 <td><span class="badge badge-success">Active</span></td>
-                                <td><a href="404.html" style="color: var(--primary); font-size: 0.85rem;">Manage</a></td>
+                                <td><a href="404.html" style="color: var(--primary); font-size: 0.85rem;">Manage</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><span style="font-family: monospace;">#043</span></td>
@@ -265,7 +372,8 @@
                                 <td>Q1 2027</td>
                                 <td><span class="badge badge-success">12%</span></td>
                                 <td><span class="badge badge-success">Active</span></td>
-                                <td><a href="404.html" style="color: var(--primary); font-size: 0.85rem;">Manage</a></td>
+                                <td><a href="404.html" style="color: var(--primary); font-size: 0.85rem;">Manage</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><span style="font-family: monospace;">#044</span></td>
@@ -273,7 +381,8 @@
                                 <td>Oct 12, 2026</td>
                                 <td><span class="badge badge-success">90%</span></td>
                                 <td><span class="badge badge-danger">Review Req</span></td>
-                                <td><a href="404.html" style="color: var(--primary); font-size: 0.85rem;">Manage</a></td>
+                                <td><a href="404.html" style="color: var(--primary); font-size: 0.85rem;">Manage</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -292,27 +401,36 @@
             <section class="dashboard-grid" style="grid-template-columns: 1fr; margin-top: 20px;">
                 <div class="card-premium" style="padding: 30px; display: flex; gap: 20px; align-items: center;">
                     <div style="flex: 1;">
-                        <input type="text" placeholder="Search by ID or Name..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--light-bg); color: #fff;">
+                        <input type="text" placeholder="Search by ID or Name..."
+                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--light-bg); color: #fff;">
                     </div>
-                    <a href="404.html" class="btn btn-primary" style="padding: 12px 24px; border-radius: 8px;">Search Engineers</a>
-                    <a href="404.html" class="btn btn-secondary" style="padding: 12px 24px; border-radius: 8px;">Add New Engineer</a>
+                    <a href="404.html" class="btn btn-primary" style="padding: 12px 24px; border-radius: 8px;">Search
+                        Engineers</a>
+                    <a href="404.html" class="btn btn-secondary" style="padding: 12px 24px; border-radius: 8px;">Add New
+                        Engineer</a>
                 </div>
             </section>
             <section class="dashboard-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 20px;">
                 <div class="card-premium" style="padding: 20px; text-align: center;">
-                    <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(229,192,123,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;"><i data-lucide="user" style="color: var(--primary);"></i></div>
+                    <div
+                        style="width: 60px; height: 60px; border-radius: 50%; background: rgba(229,192,123,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                        <i data-lucide="user" style="color: var(--primary);"></i></div>
                     <h4 style="margin: 0 0 5px 0;">Sarah Jenkins</h4>
                     <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0 0 10px 0;">ID: #041 â€¢ Lead</p>
                     <span class="badge badge-success">Active</span>
                 </div>
                 <div class="card-premium" style="padding: 20px; text-align: center;">
-                    <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(229,192,123,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;"><i data-lucide="user" style="color: var(--primary);"></i></div>
+                    <div
+                        style="width: 60px; height: 60px; border-radius: 50%; background: rgba(229,192,123,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                        <i data-lucide="user" style="color: var(--primary);"></i></div>
                     <h4 style="margin: 0 0 5px 0;">Engineer 042</h4>
                     <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0 0 10px 0;">ID: #042 â€¢ ML Ops</p>
                     <span class="badge badge-success">Active</span>
                 </div>
                 <div class="card-premium" style="padding: 20px; text-align: center;">
-                    <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(239,68,68,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;"><i data-lucide="user" style="color: #EF4444;"></i></div>
+                    <div
+                        style="width: 60px; height: 60px; border-radius: 50%; background: rgba(239,68,68,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                        <i data-lucide="user" style="color: #EF4444;"></i></div>
                     <h4 style="margin: 0 0 5px 0;">Marcus Wei</h4>
                     <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0 0 10px 0;">ID: #045 â€¢ Data</p>
                     <span class="badge badge-danger">Hold</span>
@@ -325,41 +443,62 @@
             <section class="dashboard-section-header">
                 <div>
                     <h1 style="letter-spacing: -0.5px; font-weight: 800; margin-bottom: 5px;">Training Planner</h1>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Schedule and monitor upcoming training runs.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Schedule and monitor upcoming training runs.
+                    </p>
                 </div>
             </section>
             <section class="dashboard-grid" style="grid-template-columns: 2fr 1fr; margin-top: 20px;">
                 <div class="card-premium" style="padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                         <h3 style="margin: 0;">Active Training Runs</h3>
-                        <a href="404.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.8rem; border-radius: 6px;">Schedule New Run</a>
+                        <a href="404.html" class="btn btn-secondary"
+                            style="padding: 8px 16px; font-size: 0.8rem; border-radius: 6px;">Schedule New Run</a>
                     </div>
                     <div style="border-left: 3px solid var(--primary); padding-left: 15px; margin-bottom: 20px;">
-                        <h4 style="margin: 0 0 5px 0;">RLHF Fine-Tuning <span class="badge badge-success" style="margin-left: 10px;">Confirmed</span></h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Oct 12, 2026 â€¢ Cluster Beta â€¢ 15 Epochs</p>
+                        <h4 style="margin: 0 0 5px 0;">RLHF Fine-Tuning <span class="badge badge-success"
+                                style="margin-left: 10px;">Confirmed</span></h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Oct 12, 2026 â€¢ Cluster Beta
+                            â€¢ 15 Epochs</p>
                     </div>
                     <div style="border-left: 3px solid var(--secondary); padding-left: 15px; margin-bottom: 20px;">
-                        <h4 style="margin: 0 0 5px 0;">Omni 4.5 Foundation <span class="badge badge-success" style="margin-left: 10px;">On Schedule</span></h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Q3 2026 â€¢ Data Center Alpha â€¢ 4 Engineers Assigned</p>
+                        <h4 style="margin: 0 0 5px 0;">Omni 4.5 Foundation <span class="badge badge-success"
+                                style="margin-left: 10px;">On Schedule</span></h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Q3 2026 â€¢ Data Center Alpha
+                            â€¢ 4 Engineers Assigned</p>
                     </div>
                     <div style="border-left: 3px solid var(--border); padding-left: 15px;">
-                        <h4 style="margin: 0 0 5px 0;">Vision Model Update <span class="badge badge-danger" style="margin-left: 10px;">Planning</span></h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Q1 2027 â€¢ Target TBD â€¢ Pending Selection</p>
+                        <h4 style="margin: 0 0 5px 0;">Vision Model Update <span class="badge badge-danger"
+                                style="margin-left: 10px;">Planning</span></h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Q1 2027 â€¢ Target TBD â€¢
+                            Pending Selection</p>
                     </div>
                 </div>
                 <div class="card-premium" style="padding: 30px;">
                     <h3 style="margin-bottom: 20px;">Compute Allocation</h3>
                     <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>H100 Nodes</span> <span>20/30 Available</span></div>
-                        <div class="progress-track"><div class="progress-fill" style="width: 66%;"></div></div>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                            <span>H100 Nodes</span> <span>20/30 Available</span></div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 66%;"></div>
+                        </div>
                     </div>
                     <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Storage Clusters</span> <span>85% Utilized</span></div>
-                        <div class="progress-track"><div class="progress-fill" style="width: 85%; background: var(--secondary);"></div></div>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                            <span>Storage Clusters</span> <span>85% Utilized</span></div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 85%; background: var(--secondary);"></div>
+                        </div>
                     </div>
                     <div>
-                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Network Bandwidth</span> <span>100% Assigned</span></div>
-                        <div class="progress-track"><div class="progress-fill" style="width: 100%; background: #10B981;"></div></div>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                            <span>Network Bandwidth</span> <span>100% Assigned</span></div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: #10B981;"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -370,7 +509,8 @@
             <section class="dashboard-section-header">
                 <div>
                     <h1 style="letter-spacing: -0.5px; font-weight: 800; margin-bottom: 5px;">Data Records</h1>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Access confidential datasets and evaluations.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Access confidential datasets and
+                        evaluations.</p>
                 </div>
             </section>
             <section class="dashboard-grid" style="grid-template-columns: 1fr; margin-top: 20px;">
@@ -392,21 +532,24 @@
                                 <td>Synthetic Math Q&A</td>
                                 <td>Quality Filter</td>
                                 <td><span class="badge badge-danger">Hold - Low Quality</span></td>
-                                <td><a href="404.html" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.75rem;">Review Data</a></td>
+                                <td><a href="404.html" class="btn btn-primary"
+                                        style="padding: 6px 12px; font-size: 0.75rem;">Review Data</a></td>
                             </tr>
                             <tr>
                                 <td>#046</td>
                                 <td>Code Instruct V3</td>
                                 <td>Format Check</td>
                                 <td><span class="badge badge-success">Passed</span></td>
-                                <td><a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.75rem;">Certify</a></td>
+                                <td><a href="404.html" class="btn btn-secondary"
+                                        style="padding: 6px 12px; font-size: 0.75rem;">Certify</a></td>
                             </tr>
                             <tr>
                                 <td>#047</td>
                                 <td>RLHF Preferences</td>
                                 <td>Bias Evaluation</td>
                                 <td><span class="badge badge-danger">Pending Review</span></td>
-                                <td><a href="404.html" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.75rem;">Review Data</a></td>
+                                <td><a href="404.html" class="btn btn-primary"
+                                        style="padding: 6px 12px; font-size: 0.75rem;">Review Data</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -419,10 +562,12 @@
             <section class="dashboard-section-header">
                 <div>
                     <h1 style="letter-spacing: -0.5px; font-weight: 800; margin-bottom: 5px;">Server Health</h1>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Monitor internal cluster systems infrastructure.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Monitor internal cluster systems
+                        infrastructure.</p>
                 </div>
             </section>
-            <section class="dashboard-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 20px;">
+            <section class="dashboard-grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); margin-top: 20px;">
                 <div class="card-premium" style="padding: 30px; text-align: center;">
                     <h3 style="margin-bottom: 10px; color: var(--text-muted); font-size: 0.9rem;">GPU Utilization</h3>
                     <h2 style="margin: 0; color: var(--primary);">94%</h2>
@@ -435,7 +580,8 @@
                 </div>
                 <div class="card-premium" style="padding: 30px; text-align: center;">
                     <h3 style="margin-bottom: 10px; color: var(--text-muted); font-size: 0.9rem;">Node Health</h3>
-                    <h2 style="margin: 0; color: #10B981;"><i data-lucide="shield-check" style="width: 32px; height: 32px;"></i></h2>
+                    <h2 style="margin: 0; color: #10B981;"><i data-lucide="shield-check"
+                            style="width: 32px; height: 32px;"></i></h2>
                     <p style="color: #10B981; font-size: 0.8rem; margin-top: 5px;">All Nodes Active</p>
                 </div>
                 <div class="card-premium" style="padding: 30px; text-align: center;">
@@ -456,11 +602,13 @@
             </section>
             <section class="dashboard-grid" style="grid-template-columns: 2fr 1fr; margin-top: 20px;">
                 <div class="card-premium" style="padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                         <h3 style="margin: 0;">Live Server Log</h3>
                         <span class="badge badge-danger" style="animation: pulse 2s infinite;">Live</span>
                     </div>
-                    <div style="background: #000; padding: 20px; border-radius: 8px; font-family: monospace; color: #10B981; height: 200px; overflow-y: auto;">
+                    <div
+                        style="background: #000; padding: 20px; border-radius: 8px; font-family: monospace; color: #10B981; height: 200px; overflow-y: auto;">
                         <p>> System initialized.</p>
                         <p>> Loading orbital trajectories...</p>
                         <p>> Launch vehicle successfully fueled and pressurized.</p>
@@ -470,11 +618,17 @@
                 </div>
                 <div class="card-premium" style="padding: 30px;">
                     <h3 style="margin-bottom: 20px;">Deployment Clock</h3>
-                    <div style="text-align: center; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
-                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px;">Next Major Rollout</p>
-                        <h2 id="countdown-timer" style="margin: 0; color: var(--primary); font-family: monospace; font-size: 2rem;">T- 24:12:05:00</h2>
+                    <div
+                        style="text-align: center; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px;">Next Major Rollout
+                        </p>
+                        <h2 id="countdown-timer"
+                            style="margin: 0; color: var(--primary); font-family: monospace; font-size: 2rem;">T-
+                            24:12:05:00</h2>
                     </div>
-                   <a href="404.html" class="btn btn-danger" style="width: 100%; padding: 12px; border-radius: 8px; margin-top: 20px; background: rgba(239, 68, 68, 0.2); color: #EF4444; border: 1px solid #EF4444;">Initiate Rollout Sequence</a>
+                    <a href="404.html" class="btn btn-danger"
+                        style="width: 100%; padding: 12px; border-radius: 8px; margin-top: 20px; background: rgba(239, 68, 68, 0.2); color: #EF4444; border: 1px solid #EF4444;">Initiate
+                        Rollout Sequence</a>
                 </div>
             </section>
         </div>
@@ -488,30 +642,30 @@
         if (menuToggle && sidebar) {
             menuToggle.addEventListener('click', () => { sidebar.classList.toggle('active'); });
         }
-        
+
         const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
         const contentSections = document.querySelectorAll('.content-section');
-        
+
         sidebarLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('data-section') + '-section';
-                
+
                 sidebarLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
-                
+
                 contentSections.forEach(sec => {
-                    if(sec.id === targetId) {
+                    if (sec.id === targetId) {
                         sec.style.display = 'block';
                     } else {
                         sec.style.display = 'none';
                     }
                 });
-                
+
                 if (window.innerWidth <= 991) sidebar.classList.remove('active');
             });
         });
-        
+
         const logoutLink = document.querySelector('.logout-link');
         if (logoutLink) {
             logoutLink.addEventListener('click', (e) => {
@@ -519,7 +673,7 @@
                 window.location.href = 'login.html';
             });
         }
-        
+
         // Display Email in Dashboard
         const emailDisplay = document.getElementById('userEmailDisplay');
         const savedEmail = localStorage.getItem('bankio_email');
@@ -534,7 +688,7 @@
         let cd_minutes = 5;
         let cd_seconds = 0;
 
-        setInterval(function() {
+        setInterval(function () {
             cd_seconds--;
             if (cd_seconds < 0) {
                 cd_seconds = 59;
@@ -561,7 +715,18 @@
             }
         }, 1000);
     </script>
+    <script>
+        // Page Loader
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.querySelector('.bankio-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    setTimeout(() => loader.remove(), 600);
+                }, 150);
+            }
+        });
+    </script>
 </body>
+
 </html>
-
-

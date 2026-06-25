@@ -1,4 +1,4 @@
-﻿/* 
+/* 
    Space Tourism Modern Design System
    Reflects a Premium Galactic Identity
    Color Palette: Starlight Gold, Nebula Cyan, and Void Black
@@ -762,7 +762,8 @@ footer {
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
-    color: var(--dark) !important;
+    color: var(--white) !important;
+    z-index: 1001;
   }
 
   .nav-links {
@@ -773,7 +774,7 @@ footer {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: #ffffff;
+    background: var(--light-bg);
     padding: 100px 30px;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
@@ -1266,7 +1267,7 @@ footer {
     font-weight: 800;
     letter-spacing: -0.5px;
     font-size: 1.1rem;
-    color: var(--dark);
+    color: var(--white);
     text-transform: uppercase;
     flex-shrink: 1;
     min-width: 0;
@@ -1288,7 +1289,7 @@ footer {
 .user-name {
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--dark);
+    color: var(--white);
 }
 
 .user-role {

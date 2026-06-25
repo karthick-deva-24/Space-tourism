@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -494,6 +494,18 @@
         if (emailDisplay && savedEmail) {
             emailDisplay.innerText = savedEmail;
         }
+    </script>
+    <script>
+        // Page Loader
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.querySelector('.bankio-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    setTimeout(() => loader.remove(), 600);
+                }, 150);
+            }
+        });
     </script>
 </body>
 </html>
